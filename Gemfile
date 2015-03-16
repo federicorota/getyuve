@@ -24,6 +24,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'figaro'
+gem 'paperclip'
 gem 'aws-sdk'
 
 gem 'spree', '3.0.0'
