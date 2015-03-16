@@ -46,3 +46,5 @@ Spree.config do |config|
     Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
   end
 end
+
+
