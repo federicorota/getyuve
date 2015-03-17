@@ -9,10 +9,11 @@ gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.
 gem 'sdoc', '~> 0.4.0', group: :doc # bundle exec rake doc:rails generates the API under doc/api.
 
 # Front end
-gem 'sass-rails', '~> 5.0'# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'coffee-rails', '~> 4.1.0' # Use CoffeeScript for .coffee assets and views
 gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'slim-rails' # ERB preprocessor
 
 group :development, :test do
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -24,9 +25,9 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'figaro'
-gem 'paperclip'
-gem 'aws-sdk', '< 2.0'
+gem 'figaro' # Security addon for secret keys
+gem 'paperclip' # Image Rescaling for aws
+gem 'aws-sdk', '< 2.0' # aws
 
 gem 'spree', '3.0.0'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
