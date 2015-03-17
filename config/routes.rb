@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/welcome'
+  get '/welcome', to: 'static_pages#welcome'
+  get '/product', to: 'static_pages#product'
+  get '/nutrition', to: 'static_pages#nutrition'
+  get '/privacy_policy', to: 'static_pages#privacy_policy'
+  get '/return_policy', to: 'static_pages#return_policy'
+  get '/subscribed', to: 'static_pages#subscribed'
+  get '/faq', to: 'static_pages#faq'
+  get '/the_team', to: 'static_pages#the_team'
 
-  get 'static_pages/product'
-
-  get 'static_pages/nutrition'
-
-  get 'static_pages/privacy_policy'
-
-  get 'static_pages/return_policy'
-
-  get 'static_pages/subscribed'
-
-  get 'static_pages/faq'
-
-  get 'static_pages/about'
+  resources :static_pages
 
 
   # This line mounts Spree's routes at the root of your application.

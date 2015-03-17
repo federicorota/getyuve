@@ -1,0 +1,36 @@
+.section.splash data-interchange="[#{image_path 'static_pages/welcome/hero-background-large.jpg'}, (default)]"
+  .row.small-only-text-center
+    .columns.small-12.medium-8
+      h1 Love Your Body
+      p
+        | Experience the Best Tasting
+        br/
+        | Vegan Nutritional Shake.
+        br/
+        | Now with Raw Chia Seeds!
+      ul
+        li 16g of complete plant-based protein
+        li Remarkably superior taste
+        li Great Texture with Raw Chia Seeds
+        li Vegan, Non-GMO and Soy Free
+        li Only 155 Calories per Serving
+      = link_to 'Discover Yuve', '/product', :class => 'button large radius alert'
+    .columns.small-12.medium-4
+      img data-interchange="[#{image_path 'static_pages/welcome/hero-small.png'}, (default)], [#{image_path 'static_pages/welcome/hero-medium.png'}, (medium)]"
+
+.section.shortcuts
+  .row.shortcuts.text-center
+    .columns.small-12.medium-4
+      img data-interchange="[#{image_path 'static_pages/welcome/ingredients-large.jpg'}, (default)]"
+      h2 = link_to 'Ingredients', '/product#ingredients'
+      p = link_to 'Take a look inside', '/product#ingredients'
+    .columns.small-12.medium-4
+      img data-interchange="[#{image_path 'static_pages/welcome/blog-large.jpg'}, (default)]"
+      h2 = link_to 'Blog', '/blog'
+      p = link_to 'Join the Journey', '/blog'
+    .columns.small-12.medium-4
+      img data-interchange="[#{image_path 'static_pages/welcome/shop-large.jpg'}, (default)]"
+      h2 = link_to 'Shop', '/store/products/yuve-nutritional-shake'
+      p = link_to 'Get Yuve Now!', '/store/products/yuve-nutritional-shake'
+
+= render 'partials/footer'
