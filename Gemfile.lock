@@ -102,6 +102,8 @@ GEM
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    braintree (2.40.0)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (4.0.1)
       columnize (= 0.9.0)
@@ -390,6 +392,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (< 2.0)
+  braintree
   byebug
   coffee-rails (~> 4.1.0)
   figaro

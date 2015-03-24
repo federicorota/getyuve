@@ -29,6 +29,7 @@ end
 gem 'figaro' # Security addon for secret keys
 gem 'paperclip' # Image Rescaling for aws
 gem 'aws-sdk', '< 2.0' # aws
+gem 'braintree' #Add support for Braintree Payment Gateway
 
 gem 'spree', '3.0.0'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
