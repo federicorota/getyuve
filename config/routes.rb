@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   get '/welcome', to: 'static_pages#welcome'
   get '/product', to: 'static_pages#product'
   get '/nutrition', to: 'static_pages#nutrition'
