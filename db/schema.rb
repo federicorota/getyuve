@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323225221) do
+ActiveRecord::Schema.define(version: 20150324152346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -370,6 +370,19 @@ ActiveRecord::Schema.define(version: 20150323225221) do
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id", using: :btree
   add_index "spree_payments", ["payment_method_id"], name: "index_spree_payments_on_payment_method_id", using: :btree
   add_index "spree_payments", ["source_id", "source_type"], name: "index_spree_payments_on_source_id_and_source_type", using: :btree
+
+  create_table "spree_paypal_express_checkouts", force: :cascade do |t|
+    t.string   "token"
+    t.string   "payer_id"
+    t.string   "transaction_id"
+    t.string   "state",                 default: "complete"
+    t.string   "refund_transaction_id"
+    t.datetime "refunded_at"
+    t.string   "refund_type"
+    t.datetime "created_at"
+  end
+
+  add_index "spree_paypal_express_checkouts", ["transaction_id"], name: "index_spree_paypal_express_checkouts_on_transaction_id", using: :btree
 
   create_table "spree_preferences", force: :cascade do |t|
     t.text     "value"
