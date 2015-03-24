@@ -18,6 +18,14 @@ GIT
       tinymce-rails (~> 4.0.16)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_mail_settings.git
+  revision: f8824df89530c1da1c8669ec5292ae7a4e6e79b8
+  branch: 3-0-stable
+  specs:
+    spree_mail_settings (2.2.0)
+      spree_backend (~> 3.0.0.rc2)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: 07f16255c8e83cf5763f2c3510444ee1b4cdc4dd
   branch: 3-0-stable
@@ -426,6 +434,7 @@ DEPENDENCIES
   spree_blogging_spree!
   spree_editor!
   spree_gateway!
+  spree_mail_settings!
   spree_paypal_express!
   spring
   turbolinks

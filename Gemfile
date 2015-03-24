@@ -31,6 +31,7 @@ gem 'paperclip' # Image Rescaling for aws
 gem 'aws-sdk', '< 2.0' # aws
 gem 'braintree' #Add support for Braintree Payment Gateway
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: 'master' #Add support for Paypal Express
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: '3-0-stable'
 
 gem 'spree', '3.0.0'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'

@@ -10,6 +10,10 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |config|
+
+  Spree::AppConfiguration.class_eval do
+    preference :mails_from, :string
+  end
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
