@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150315193819) do
+ActiveRecord::Schema.define(version: 20150323225221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,20 @@ ActiveRecord::Schema.define(version: 20150315193819) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id", using: :btree
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type", using: :btree
+
+  create_table "spree_blog_entries", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "visible",      default: false
+    t.datetime "published_at"
+    t.text     "summary"
+    t.integer  "author_id"
+  end
+
+  add_index "spree_blog_entries", ["author_id"], name: "index_spree_blog_entries_on_author_id", using: :btree
 
   create_table "spree_calculators", force: :cascade do |t|
     t.string   "type"
@@ -937,6 +951,10 @@ ActiveRecord::Schema.define(version: 20150315193819) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string   "nickname"
+    t.string   "website_url"
+    t.string   "google_plus_url"
+    t.text     "bio_info"
   end
 
   add_index "spree_users", ["deleted_at"], name: "index_spree_users_on_deleted_at", using: :btree
@@ -992,5 +1010,25 @@ ActiveRecord::Schema.define(version: 20150315193819) do
 
   add_index "spree_zones", ["default_tax"], name: "index_spree_zones_on_default_tax", using: :btree
   add_index "spree_zones", ["kind"], name: "index_spree_zones_on_kind", using: :btree
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string  "name"
+    t.integer "taggings_count", default: 0
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
 end

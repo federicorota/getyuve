@@ -18,6 +18,15 @@ GIT
     spree_gateway (3.0.0.beta)
       spree_core (~> 3.0.0.beta)
 
+GIT
+  remote: git://github.com/viperouge/spree-blogging-spree.git
+  revision: 991c9fe4a4c32dc98d8089af06bf46e21f32d2ec
+  branch: spree-3-0-rc2
+  specs:
+    spree_blogging_spree (3.0.0)
+      acts-as-taggable-on (~> 3.4.3)
+      spree_core (~> 3.0.0.rc2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,6 +70,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.4.4)
+      activerecord (>= 3.2, < 5)
     acts_as_list (0.6.0)
       activerecord (>= 3.0)
     addressable (2.3.7)
@@ -379,6 +390,7 @@ DEPENDENCIES
   slim-rails
   spree (= 3.0.0)
   spree_auth_devise!
+  spree_blogging_spree!
   spree_gateway!
   spring
   turbolinks
