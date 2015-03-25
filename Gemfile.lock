@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/federicorota/spree-blogging-spree.git
+  revision: 991c9fe4a4c32dc98d8089af06bf46e21f32d2ec
+  branch: spree-3-0-rc2
+  specs:
+    spree_blogging_spree (3.0.0)
+      acts-as-taggable-on (~> 3.4.3)
+      spree_core (~> 3.0.0.rc2)
+
+GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
   revision: 39b3a0c32e6c64b60d67d872baaf729c0a6a5c2e
   branch: master
@@ -44,15 +53,6 @@ GIT
   specs:
     spree_gateway (3.0.0.beta)
       spree_core (~> 3.0.0.beta)
-
-GIT
-  remote: git://github.com/viperouge/spree-blogging-spree.git
-  revision: 991c9fe4a4c32dc98d8089af06bf46e21f32d2ec
-  branch: spree-3-0-rc2
-  specs:
-    spree_blogging_spree (3.0.0)
-      acts-as-taggable-on (~> 3.4.3)
-      spree_core (~> 3.0.0.rc2)
 
 GEM
   remote: https://rubygems.org/
