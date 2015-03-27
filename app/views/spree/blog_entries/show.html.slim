@@ -1,13 +1,24 @@
-- content_for :head do
-  - if !@blog_entry.author.blank? and !@blog_entry.author.google_plus_url.blank?
-    link rel="author" href="#{@blog_entry.author.google_plus_url}"/
+/ - content_for :head do
+/   - if !@blog_entry.author.blank? and !@blog_entry.author.google_plus_url.blank?
+/     link rel="author" href="#{@blog_entry.author.google_plus_url}"/
+/
+/ - content_for :sidebar do
+/   = render :partial => 'spree/blog_entries/blog_sidebar'
 
-- content_for :sidebar do
-  = render :partial => 'spree/blog_entries/blog_sidebar'
+/ #blog_entry_container
+/   #blog_entry_entry
+/     h1 = @blog_entry.title
+/     .blog_entry_body = @blog_entry.body.html_safe
+/     = render partial: 'spree/blog_entries/blog_entry_details', locals: { blog_entry: @blog_entry }
+/     = render :partial => 'spree/blog_entries/comments', :locals => { :blog_entry => @blog_entry }
 
-#blog_entry_container
-  #blog_entry_entry
+= render :partial => 'spree/blog_entries/categories'
+
+.row
+  .columns.small-12.medium-9
     h1 = @blog_entry.title
-    .blog_entry_body = @blog_entry.body.html_safe
-    = render partial: 'spree/blog_entries/blog_entry_details', locals: { blog_entry: @blog_entry }
+    = @blog_entry.body.html_safe
+    = render :partial => 'spree/blog_entries/blog_entry_details', :locals => { :blog_entry => @blog_entry }
     = render :partial => 'spree/blog_entries/comments', :locals => { :blog_entry => @blog_entry }
+  .columns.small-12.medium-3
+    = render :partial => 'spree/blog_entries/blog_sidebar'

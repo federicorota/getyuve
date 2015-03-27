@@ -1,0 +1,5 @@
+.row
+  .columns.small-12
+    .categories
+      - @categories.each do |cat|
+        .category[class="#{cat.name.to_url}"] = "#{cat.name} (#{cat.count})"

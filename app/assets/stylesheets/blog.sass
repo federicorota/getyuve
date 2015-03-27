@@ -1,0 +1,20 @@
+// Categories
+
+.category
+  +button()
+  margin:
+    left: 0.30em
+    right: 0.30em
+  color: #fff
+  text-shadow: 1px 1px 0 rgba(black, .5)
+  @media #{$medium-up}
+  &.fitness
+    +button($bg: #27a5ef)
+  &.health-and-beauty
+    +button($bg: #ed4dfe)
+  &.psychology-and-life
+    +button($bg: #6bf98f)
+  &.recipes
+    +button($bg: #e9ce34)
+  &.trends
+    +button($bg: #ff9d00)
