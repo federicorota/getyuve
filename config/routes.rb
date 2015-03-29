@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get '/return_policy', to: 'static_pages#return_policy'
   get '/subscribed', to: 'static_pages#subscribed'
   get '/faq', to: 'static_pages#faq'
-  get '/the_team', to: 'static_pages#the_team'
+  get '/the_team', to: 'static_pages#the_team', :as => :the_team
+  get '/blog', to: 'spree/blog_entries#index', :as => :blog
 
   resources :static_pages
 

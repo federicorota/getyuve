@@ -15,6 +15,7 @@ gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'slim-rails' # ERB preprocessor
 gem 'foundation-rails' # Front end grid framework
+gem 'stringex' # Vaffaculo
 
 group :development, :test do
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,3 +39,4 @@ gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_blogging_spree', github: 'federicorota/spree-blogging-spree', branch: 'spree-3-0-rc2'
 gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: '3-0-stable'
+gem 'mws-rb', github: 'federicorota/mws-rb', branch: 'master'

@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/federicorota/mws-rb.git
+  revision: 5ac1403fdedaa6ccd74dedfd802340835078c7ca
+  branch: master
+  specs:
+    mws-rb (0.0.3)
+      activesupport (~> 4.2)
+      builder
+      httparty (~> 0.13.0)
+      nokogiri (~> 1.6.0)
+
+GIT
   remote: git://github.com/federicorota/spree-blogging-spree.git
   revision: 991c9fe4a4c32dc98d8089af06bf46e21f32d2ec
   branch: spree-3-0-rc2
@@ -422,6 +433,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mws-rb!
   paperclip
   pg
   rails (= 4.2.0)
@@ -437,6 +449,7 @@ DEPENDENCIES
   spree_mail_settings!
   spree_paypal_express!
   spring
+  stringex
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
