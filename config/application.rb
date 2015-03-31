@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Getyuve
   class Application < Rails::Application
-    
+
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -35,5 +35,11 @@ module Getyuve
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Ignore spree-blogging-sree routes to allow manual overriding
+    initializer "ignore spree-blogging-spree routes", :after => "add_routing_paths" do |app|
+      app.routes_reloader.paths.delete_if{ |path| path.include?("spree-blogging-spree") }
+    end
+
   end
 end

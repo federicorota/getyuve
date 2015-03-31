@@ -16,6 +16,7 @@ gem 'turbolinks' # Turbolinks makes following links in your web application fast
 gem 'slim-rails' # ERB preprocessor
 gem 'foundation-rails' # Front end grid framework
 gem 'stringex' # Vaffaculo
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
